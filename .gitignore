@@ -2,6 +2,8 @@
 .ipynb_checkpoints/
 __pycache__/
 
+output-sample-run
+
 *.npy
 *.txt
 *.zip

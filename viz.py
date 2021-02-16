@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[15]:
+# In[1]:
 
+
+import os
 
 import pandas as pd
 
@@ -252,32 +254,38 @@ if MAIN:
 # In[11]:
 
 
-def analyse_related_features(df_output):
+def analyse_related_features(df_output, folder_output="./"):
+    if not os.path.exists(folder_output):  # create folder if does not exist
+        os.makedirs(folder_output)
+        
+    # should have another parameter that includes the rest of the timetable as well
+    # we don't need to plot the venues and profs that we are not optimising on
+    
     for instructor in set(df_output["instructor"]):
-        df_subset = df_output[df_output["instructor"] == instructor]  # should include the rest of the timetable as well
+        df_subset = df_output[df_output["instructor"] == instructor]  
         organized_timetable = organize_timetable(df_subset)
         plot_organised_timetable(organized_timetable, title="For instructor {}".format(instructor),
-                                 save_path="./output/instructor-{}.png".format(instructor))
+                                 save_path="{}/instructor-{}.png".format(folder_output, instructor))
     
     for venue in set(df_output["venue"]):
         for sub_venue in venue.split("/"):
-            df_subset = df_output[df_output["venue"].str.contains(sub_venue)]  # should include the rest of the timetable as well
+            df_subset = df_output[df_output["venue"].str.contains(sub_venue)]
             organized_timetable = organize_timetable(df_subset)
             plot_organised_timetable(organized_timetable, title="For venue {}".format(venue),
-                                     save_path="./output/venue-{}.png".format(sub_venue))
+                                     save_path="{}/venue-{}.png".format(folder_output, sub_venue))
     
     for subject in set(df_output["subject"]):
-        df_subset = df_output[df_output["subject"] == subject]  # should include the rest of the timetable as well
+        df_subset = df_output[df_output["subject"] == subject]
         organized_timetable = organize_timetable(df_subset)
         plot_organised_timetable(organized_timetable, title="For subject {}".format(subject),
-                                 save_path="./output/subject-{}.png".format(subject))
+                                 save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
 # In[12]:
 
 
 if MAIN:
-    analyse_related_features(df_output)
+    analyse_related_features(df_output, folder_output="output-sample-run")
 
 
 # (for versioning purposes)
@@ -287,7 +295,6 @@ if MAIN:
 
 if MAIN:
     get_ipython().system('jupyter nbconvert --to script viz.ipynb')
-    get_ipython().system('jupyter nbconvert --to html viz.ipynb')
 
 
 # In[ ]:
