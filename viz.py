@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[15]:
 
 
 import pandas as pd
@@ -9,6 +9,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.collections as mc
+
+MAIN = __name__ == "__main__"
 
 
 # # Parse Timetable
@@ -93,8 +95,9 @@ def organize_timetable(df, post_process_times=True):
     timetable = [parallels[:-1] for parallels in timetable]
     return timetable
 
-organized_timetable = organize_timetable(df_sample)
-# organized_timetable[0]
+if MAIN:
+    organized_timetable = organize_timetable(df_sample)
+    # organized_timetable[0]
 
 
 # In[6]:
@@ -152,7 +155,8 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
         plt.show()
     plt.close()
 
-plot_organised_timetable(organized_timetable, show_fig=True)
+if MAIN:
+    plot_organised_timetable(organized_timetable, show_fig=True)
 
 
 # # Term 7 timetable
@@ -160,9 +164,10 @@ plot_organised_timetable(organized_timetable, show_fig=True)
 # In[7]:
 
 
-df_sample = df_ref_job[(df_ref_job["term"] == "ESD T7")&(df_ref_job["term_half"] == 1)]
-organized_timetable = organize_timetable(df_sample)
-plot_organised_timetable(organized_timetable, show_fig=True)
+if MAIN:
+    df_sample = df_ref_job[(df_ref_job["term"] == "ESD T7")&(df_ref_job["term_half"] == 1)]
+    organized_timetable = organize_timetable(df_sample)
+    plot_organised_timetable(organized_timetable, show_fig=True)
 
 
 # # Parsing the results
@@ -171,19 +176,41 @@ plot_organised_timetable(organized_timetable, show_fig=True)
 
 
 results = '''
-X[1,26,1] 1
-X[2,26,25] 1
-X[3,26,10] 1
-X[4,26,33] 1
-X[5,26,17] 1
-X[6,26,29] 1
-X[7,33,1] 1
-X[8,33,25] 1
-X[9,33,49] 1
-X[10,32,5] 1
-X[11,32,29] 1
-X[12,32,1] 1
-X[13,32,25] 1
+X[1,26,17] 1
+X[2,26,29] 1
+X[3,26,1] 1
+X[4,26,47] 1
+X[5,26,10] 1
+X[6,26,52] 1
+X[7,33,5] 1
+X[8,33,26] 1
+X[9,33,60] 1
+X[10,32,6] 1
+X[11,32,25] 1
+X[12,32,19] 1
+X[13,32,32] 1
+X[27,20,12] 1
+X[28,20,28] 1
+X[29,17,21] 1
+X[30,17,29] 1
+X[31,12,57] 1
+X[32,32,1] 1
+X[33,6,49] 1
+X[34,6,14] 1
+X[35,6,75] 1
+X[36,1,34] 1
+X[37,12,5] 1
+X[38,12,29] 1
+X[39,17,1] 1
+X[40,17,33] 1
+X[54,17,11] 1
+X[55,17,25] 1
+X[56,8,88] 1
+X[57,8,1] 1
+X[58,21,1] 1
+X[59,21,25] 1
+X[60,27,1] 1
+X[61,27,88] 1
 '''.strip()
 results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for result in results.split('\n')]
 results # job_ix, venue_ix, time_ix
@@ -214,42 +241,43 @@ def parse_results(results):
 # In[10]:
 
 
-df_output = parse_results(results)
-organized_timetable = organize_timetable(df_output)
-plot_organised_timetable(organized_timetable)
+if MAIN:
+    df_output = parse_results(results)
+    organized_timetable = organize_timetable(df_output)
+    plot_organised_timetable(organized_timetable, show_fig=True)
 
 
 # # Analyse related features
 
+# In[11]:
+
+
+def analyse_related_features(df_output):
+    for instructor in set(df_output["instructor"]):
+        df_subset = df_output[df_output["instructor"] == instructor]  # should include the rest of the timetable as well
+        organized_timetable = organize_timetable(df_subset)
+        plot_organised_timetable(organized_timetable, title="For instructor {}".format(instructor),
+                                 save_path="./output/instructor-{}.png".format(instructor))
+    
+    for venue in set(df_output["venue"]):
+        for sub_venue in venue.split("/"):
+            df_subset = df_output[df_output["venue"].str.contains(sub_venue)]  # should include the rest of the timetable as well
+            organized_timetable = organize_timetable(df_subset)
+            plot_organised_timetable(organized_timetable, title="For venue {}".format(venue),
+                                     save_path="./output/venue-{}.png".format(sub_venue))
+    
+    for subject in set(df_output["subject"]):
+        df_subset = df_output[df_output["subject"] == subject]  # should include the rest of the timetable as well
+        organized_timetable = organize_timetable(df_subset)
+        plot_organised_timetable(organized_timetable, title="For subject {}".format(subject),
+                                 save_path="./output/subject-{}.png".format(subject))
+
+
 # In[12]:
 
 
-for instructor in set(df_output["instructor"]):
-    df_subset = df_output[df_output["instructor"] == instructor]  # should include the rest of the timetable as well
-    organized_timetable = organize_timetable(df_subset)
-    plot_organised_timetable(organized_timetable, title="For instructor {}".format(instructor),
-                             save_path="./output/instructor-{}.png".format(instructor))
-
-
-# In[13]:
-
-
-for venue in set(df_output["venue"]):
-    for sub_venue in venue.split("/"):
-        df_subset = df_output[df_output["venue"].str.contains(sub_venue)]  # should include the rest of the timetable as well
-        organized_timetable = organize_timetable(df_subset)
-        plot_organised_timetable(organized_timetable, title="For venue {}".format(venue),
-                                 save_path="./output/venue-{}.png".format(sub_venue))
-
-
-# In[16]:
-
-
-for subject in set(df_output["subject"]):
-    df_subset = df_output[df_output["subject"] == subject]  # should include the rest of the timetable as well
-    organized_timetable = organize_timetable(df_subset)
-    plot_organised_timetable(organized_timetable, title="For subject {}".format(subject),
-                             save_path="./output/subject-{}.png".format(subject))
+if MAIN:
+    analyse_related_features(df_output)
 
 
 # (for versioning purposes)
@@ -257,14 +285,9 @@ for subject in set(df_output["subject"]):
 # In[14]:
 
 
-get_ipython().system('jupyter nbconvert --to script viz.ipynb')
-get_ipython().system('jupyter nbconvert --to html viz.ipynb')
-
-
-# In[15]:
-
-
-# ref_job
+if MAIN:
+    get_ipython().system('jupyter nbconvert --to script viz.ipynb')
+    get_ipython().system('jupyter nbconvert --to html viz.ipynb')
 
 
 # In[ ]:
