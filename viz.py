@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[37]:
+# In[ ]:
 
 
 import os, collections
@@ -17,7 +17,7 @@ MAIN = __name__ == "__main__"
 
 # # Parse Timetable
 
-# In[38]:
+# In[ ]:
 
 
 def load_original_timetable(filepath):
@@ -39,7 +39,7 @@ def make_records(df, idx_col):
     return {k:v for k,v in zip(idxs, record_list)}
 
 
-# In[39]:
+# In[ ]:
 
 
 df_ref_job = load_original_timetable("./reference/TT Data.csv")
@@ -51,7 +51,7 @@ ref_time = make_records(pd.read_csv("./reference/reference - time.csv"), "time_i
 df_ref_job
 
 
-# In[40]:
+# In[ ]:
 
 
 # extrack track subjects
@@ -69,7 +69,7 @@ track_subjects
 # # Extract subset
 # We will only plot a subset of the timetable
 
-# In[41]:
+# In[ ]:
 
 
 df_sample = df_ref_job[(df_ref_job["term"] == "ESD T5")&(df_ref_job["term_half"] == 1)]
@@ -79,7 +79,7 @@ df_sample
 
 # # Plot timetable
 
-# In[42]:
+# In[ ]:
 
 
 def organize_timetable(df, post_process_times=True):
@@ -117,16 +117,26 @@ if MAIN:
     # organized_timetable[0]
 
 
-# In[43]:
+# In[ ]:
 
 
-def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, title=""):
+fig = plt.figure(figsize=(14,10), facecolor=(1, 1, 1))
+ax = plt.gca()
+ax.add_patch(patches.Rectangle((0, 0), 1, 1, color=(0,0,0), alpha=0.1)) 
+plt.show()
+
+
+# In[ ]:
+
+
+def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, title="", highlighted_track=""):
 
     fig = plt.figure(figsize=(14,10), facecolor=(1, 1, 1))
     ax = plt.gca()
 
-    def add_rectangle(ax, locx, locy, height, width):
-        ax.add_patch(patches.Rectangle((locx, locy), height, width, fill=False)) 
+    def add_rectangle(ax, locx, locy, height, width, color="white"):
+        ax.add_patch(patches.Rectangle((locx, locy), height, width, edgecolor="black",
+                                       facecolor=color, alpha=0.5))
 
     def add_text(ax, locx, locy, text, offset=0.1):
         locx += offset
@@ -145,7 +155,10 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
             for record in parallel_day_schedule:
                 xptr = record["hour_index"]
                 width = record["proc_time"]
-                add_rectangle(ax, xptr, yptr, width, 1)
+                color = "white"
+                if record["subject"] in track_subjects[highlighted_track]:
+                    color = "yellow"
+                add_rectangle(ax, xptr, yptr, width, 1, color=color)
                 add_text(ax, xptr, yptr, record["subject"] + " " + record["class_num"])
                 add_text(ax, xptr, yptr+0.3, record["venue"])
                 add_text(ax, xptr, yptr+0.6, record["instructor"])
@@ -173,12 +186,12 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
     plt.close()
 
 if MAIN:
-    plot_organised_timetable(organized_timetable, show_fig=True)
+    plot_organised_timetable(organized_timetable, show_fig=True, highlighted_track="track_core")
 
 
 # # Term 7 timetable
 
-# In[44]:
+# In[ ]:
 
 
 if MAIN:
@@ -187,9 +200,82 @@ if MAIN:
     plot_organised_timetable(organized_timetable, show_fig=True)
 
 
-# # Parsing the results
+# # Plot all relevant timetables
 
-# In[45]:
+# In[ ]:
+
+
+def analyse_related_features(df_output, folder_output="./"):
+    if not os.path.exists(folder_output):  # create folder if does not exist
+        os.makedirs(folder_output)
+
+    organized_timetable = organize_timetable(df_output)
+    plot_organised_timetable(organized_timetable,
+                             save_path="{}/all.png".format(folder_output))
+
+    # term 5 timetable
+    df_subset = df_output[df_output["term"] == "ESD T5"]
+    organized_timetable = organize_timetable(df_subset)
+    plot_organised_timetable(organized_timetable, 
+                             title="Term 5 ESD modules",
+                             save_path="{}/comb-ESD-T5.png".format(folder_output))
+
+    # term 5 cohort 1 timetable
+    df_cohort = df_subset[(df_subset["class_num"] == "CS01") | (df_subset["class_num"] == "LS01")]
+    organized_timetable = organize_timetable(df_cohort)
+    plot_organised_timetable(organized_timetable, 
+                             title="Term 5 ESD modules - cohort 1",
+                             save_path="{}/comb-ESD-T5-cohort-1.png".format(folder_output))
+
+    # term 5 cohort 2 timetable
+    df_cohort = df_subset[(df_subset["class_num"] == "CS02") | (df_subset["class_num"] == "LS01")]
+    organized_timetable = organize_timetable(df_cohort)
+    plot_organised_timetable(organized_timetable, 
+                             title="Term 5 ESD modules - cohort 2",
+                             save_path="{}/comb-ESD-T5-cohort-2.png".format(folder_output))
+
+    # term 7 timetable
+    df_subset = df_output[df_output["term"] != "ESD T5"]
+    organized_timetable = organize_timetable(df_subset)
+    plot_organised_timetable(organized_timetable, 
+                             title="Term 7 ESD modules",
+                             save_path="{}/comb-ESD-T7.png".format(folder_output))
+    
+    # plotting for each track
+    for track in track_subjects:
+        if track == "" or track == "track_core":
+            continue
+        plot_organised_timetable(organized_timetable, highlighted_track=track,
+                                 title="Term 7 ESD modules - Track: {}".format(track), 
+                                 save_path="{}/comb-ESD-T7-track-{}.png".format(folder_output, track))
+    
+    # plotting for each instructor, venue, subject concerned
+    for instructor in set(df_output["instructor"]):
+        df_subset = df_output[df_output["instructor"] == instructor]  
+        organized_timetable = organize_timetable(df_subset)
+        plot_organised_timetable(organized_timetable, 
+                                 title="For instructor {}".format(instructor),
+                                 save_path="{}/instructor-{}.png".format(folder_output, instructor))
+    
+    for venue in set(df_output["venue"]):
+        for sub_venue in venue.split("/"):
+            df_subset = df_output[df_output["venue"].str.contains(sub_venue)]
+            organized_timetable = organize_timetable(df_subset)
+            plot_organised_timetable(organized_timetable, 
+                                     title="For venue {}".format(venue),
+                                     save_path="{}/venue-{}.png".format(folder_output, sub_venue))
+    
+    for subject in set(df_output["subject"]):
+        df_subset = df_output[df_output["subject"] == subject]
+        organized_timetable = organize_timetable(df_subset)
+        plot_organised_timetable(organized_timetable, 
+                                 title="For subject {}".format(subject),
+                                 save_path="{}/subject-{}.png".format(folder_output, subject))
+
+
+# # Parsing a sample result
+
+# In[ ]:
 
 
 results = '''
@@ -233,7 +319,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[52]:
+# In[ ]:
 
 
 def parse_results(results):
@@ -256,86 +342,19 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[53]:
+# In[ ]:
 
 
 if MAIN:
     df_output = parse_results(results)
     organized_timetable = organize_timetable(df_output)
-    plot_organised_timetable(organized_timetable, show_fig=True)
-
-
-# # Analyse related features
-
-# In[56]:
-
-
-def analyse_related_features(df_output, folder_output="./"):
-    if not os.path.exists(folder_output):  # create folder if does not exist
-        os.makedirs(folder_output)
-
-    organized_timetable = organize_timetable(df_output)
-    plot_organised_timetable(organized_timetable,
-                             save_path="{}/all.png".format(folder_output))
-
-    # term 5 timetable
-    df_subset = df_output[df_output["term"] == "ESD T5"]
-    organized_timetable = organize_timetable(df_subset)
-    plot_organised_timetable(organized_timetable, title="Term 5 ESD modules",
-                             save_path="{}/comb-ESD-T5.png".format(folder_output))
-
-    # term 5 cohort 1 timetable
-    df_cohort = df_subset[(df_subset["class_num"] == "CS01") | (df_subset["class_num"] == "LS01")]
-    organized_timetable = organize_timetable(df_cohort)
-    plot_organised_timetable(organized_timetable, title="Term 5 ESD modules - cohort 1",
-                             save_path="{}/comb-ESD-T5-cohort-1.png".format(folder_output))
-
-    # term 5 cohort 2 timetable
-    df_cohort = df_subset[(df_subset["class_num"] == "CS02") | (df_subset["class_num"] == "LS01")]
-    organized_timetable = organize_timetable(df_cohort)
-    plot_organised_timetable(organized_timetable, title="Term 5 ESD modules - cohort 2",
-                             save_path="{}/comb-ESD-T5-cohort-2.png".format(folder_output))
-
-    
-    df_subset = df_output[df_output["term"] != "ESD T5"]
-    organized_timetable = organize_timetable(df_subset)
-    plot_organised_timetable(organized_timetable, title="Term 7 ESD modules",
-                             save_path="{}/comb-not-ESD-T5.png".format(folder_output))
-    
-    # should have another parameter that includes the rest of the timetable as well
-    # we don't need to plot the venues and profs that we are not optimising on
-    
-    for instructor in set(df_output["instructor"]):
-        df_subset = df_output[df_output["instructor"] == instructor]  
-        organized_timetable = organize_timetable(df_subset)
-        plot_organised_timetable(organized_timetable, title="For instructor {}".format(instructor),
-                                 save_path="{}/instructor-{}.png".format(folder_output, instructor))
-    
-    for venue in set(df_output["venue"]):
-        for sub_venue in venue.split("/"):
-            df_subset = df_output[df_output["venue"].str.contains(sub_venue)]
-            organized_timetable = organize_timetable(df_subset)
-            plot_organised_timetable(organized_timetable, title="For venue {}".format(venue),
-                                     save_path="{}/venue-{}.png".format(folder_output, sub_venue))
-    
-    for subject in set(df_output["subject"]):
-        df_subset = df_output[df_output["subject"] == subject]
-        organized_timetable = organize_timetable(df_subset)
-        plot_organised_timetable(organized_timetable, title="For subject {}".format(subject),
-                                 save_path="{}/subject-{}.png".format(folder_output, subject))
-
-
-# In[57]:
-
-
-if MAIN:
-    df_output = df_ref_job
-    analyse_related_features(df_output, folder_output="output-sample-run")
+    plot_organised_timetable(organized_timetable, show_fig=True)  # show master
+    analyse_related_features(df_output, folder_output="given-timetable")
 
 
 # (for versioning purposes)
 
-# In[58]:
+# In[ ]:
 
 
 if MAIN:
