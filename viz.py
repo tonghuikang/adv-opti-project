@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[37]:
 
 
-import os
+import os, collections
 
 import pandas as pd
 
@@ -17,7 +17,7 @@ MAIN = __name__ == "__main__"
 
 # # Parse Timetable
 
-# In[2]:
+# In[38]:
 
 
 def load_original_timetable(filepath):
@@ -39,7 +39,7 @@ def make_records(df, idx_col):
     return {k:v for k,v in zip(idxs, record_list)}
 
 
-# In[3]:
+# In[39]:
 
 
 df_ref_job = load_original_timetable("./reference/TT Data.csv")
@@ -51,10 +51,25 @@ ref_time = make_records(pd.read_csv("./reference/reference - time.csv"), "time_i
 df_ref_job
 
 
+# In[40]:
+
+
+# extrack track subjects
+track_subjects = collections.defaultdict(set)
+
+for subject_info in ref_subject.values():
+    subject, subject_ix, *tracks = subject_info
+    for track in tracks:
+        if subject_info[track]:
+            track_subjects[track].add(subject_info[subject])
+
+track_subjects
+
+
 # # Extract subset
 # We will only plot a subset of the timetable
 
-# In[4]:
+# In[41]:
 
 
 df_sample = df_ref_job[(df_ref_job["term"] == "ESD T5")&(df_ref_job["term_half"] == 1)]
@@ -64,7 +79,7 @@ df_sample
 
 # # Plot timetable
 
-# In[5]:
+# In[42]:
 
 
 def organize_timetable(df, post_process_times=True):
@@ -102,7 +117,7 @@ if MAIN:
     # organized_timetable[0]
 
 
-# In[ ]:
+# In[43]:
 
 
 def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, title=""):
@@ -163,7 +178,7 @@ if MAIN:
 
 # # Term 7 timetable
 
-# In[ ]:
+# In[44]:
 
 
 if MAIN:
@@ -174,7 +189,7 @@ if MAIN:
 
 # # Parsing the results
 
-# In[ ]:
+# In[45]:
 
 
 results = '''
@@ -218,7 +233,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[ ]:
+# In[52]:
 
 
 def parse_results(results):
@@ -235,13 +250,13 @@ def parse_results(results):
             "class_num": job["class_num"],
             "subject": job["subject"],
             "instructor": job["instructor"],
-            "comb": job["term"]
+            "term": job["term"]
         }
         records.append(record)
     return pd.DataFrame.from_records(records)
 
 
-# In[ ]:
+# In[53]:
 
 
 if MAIN:
@@ -252,7 +267,7 @@ if MAIN:
 
 # # Analyse related features
 
-# In[ ]:
+# In[56]:
 
 
 def analyse_related_features(df_output, folder_output="./"):
@@ -263,14 +278,28 @@ def analyse_related_features(df_output, folder_output="./"):
     plot_organised_timetable(organized_timetable,
                              save_path="{}/all.png".format(folder_output))
 
-    df_subset = df_output[df_output["comb"] == "ESD T5"]  
+    # term 5 timetable
+    df_subset = df_output[df_output["term"] == "ESD T5"]
     organized_timetable = organize_timetable(df_subset)
-    plot_organised_timetable(organized_timetable,
+    plot_organised_timetable(organized_timetable, title="Term 5 ESD modules",
                              save_path="{}/comb-ESD-T5.png".format(folder_output))
 
-    df_subset = df_output[df_output["comb"] != "ESD T5"]  
+    # term 5 cohort 1 timetable
+    df_cohort = df_subset[(df_subset["class_num"] == "CS01") | (df_subset["class_num"] == "LS01")]
+    organized_timetable = organize_timetable(df_cohort)
+    plot_organised_timetable(organized_timetable, title="Term 5 ESD modules - cohort 1",
+                             save_path="{}/comb-ESD-T5-cohort-1.png".format(folder_output))
+
+    # term 5 cohort 2 timetable
+    df_cohort = df_subset[(df_subset["class_num"] == "CS02") | (df_subset["class_num"] == "LS01")]
+    organized_timetable = organize_timetable(df_cohort)
+    plot_organised_timetable(organized_timetable, title="Term 5 ESD modules - cohort 2",
+                             save_path="{}/comb-ESD-T5-cohort-2.png".format(folder_output))
+
+    
+    df_subset = df_output[df_output["term"] != "ESD T5"]
     organized_timetable = organize_timetable(df_subset)
-    plot_organised_timetable(organized_timetable,
+    plot_organised_timetable(organized_timetable, title="Term 7 ESD modules",
                              save_path="{}/comb-not-ESD-T5.png".format(folder_output))
     
     # should have another parameter that includes the rest of the timetable as well
@@ -296,16 +325,17 @@ def analyse_related_features(df_output, folder_output="./"):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[ ]:
+# In[57]:
 
 
 if MAIN:
+    df_output = df_ref_job
     analyse_related_features(df_output, folder_output="output-sample-run")
 
 
 # (for versioning purposes)
 
-# In[ ]:
+# In[58]:
 
 
 if MAIN:
