@@ -102,7 +102,7 @@ if MAIN:
     # organized_timetable[0]
 
 
-# In[6]:
+# In[ ]:
 
 
 def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, title=""):
@@ -163,7 +163,7 @@ if MAIN:
 
 # # Term 7 timetable
 
-# In[7]:
+# In[ ]:
 
 
 if MAIN:
@@ -174,7 +174,7 @@ if MAIN:
 
 # # Parsing the results
 
-# In[8]:
+# In[ ]:
 
 
 results = '''
@@ -218,7 +218,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[9]:
+# In[ ]:
 
 
 def parse_results(results):
@@ -234,13 +234,14 @@ def parse_results(results):
             "venue": venue["venue"],
             "class_num": job["class_num"],
             "subject": job["subject"],
-            "instructor": job["instructor"]
+            "instructor": job["instructor"],
+            "comb": job["term"]
         }
         records.append(record)
     return pd.DataFrame.from_records(records)
 
 
-# In[10]:
+# In[ ]:
 
 
 if MAIN:
@@ -251,13 +252,27 @@ if MAIN:
 
 # # Analyse related features
 
-# In[11]:
+# In[ ]:
 
 
 def analyse_related_features(df_output, folder_output="./"):
     if not os.path.exists(folder_output):  # create folder if does not exist
         os.makedirs(folder_output)
-        
+
+    organized_timetable = organize_timetable(df_output)
+    plot_organised_timetable(organized_timetable,
+                             save_path="{}/all.png".format(folder_output))
+
+    df_subset = df_output[df_output["comb"] == "ESD T5"]  
+    organized_timetable = organize_timetable(df_subset)
+    plot_organised_timetable(organized_timetable,
+                             save_path="{}/comb-ESD-T5.png".format(folder_output))
+
+    df_subset = df_output[df_output["comb"] != "ESD T5"]  
+    organized_timetable = organize_timetable(df_subset)
+    plot_organised_timetable(organized_timetable,
+                             save_path="{}/comb-not-ESD-T5.png".format(folder_output))
+    
     # should have another parameter that includes the rest of the timetable as well
     # we don't need to plot the venues and profs that we are not optimising on
     
@@ -281,7 +296,7 @@ def analyse_related_features(df_output, folder_output="./"):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[12]:
+# In[ ]:
 
 
 if MAIN:
@@ -290,7 +305,7 @@ if MAIN:
 
 # (for versioning purposes)
 
-# In[14]:
+# In[ ]:
 
 
 if MAIN:
