@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 import os, collections
@@ -17,7 +17,7 @@ MAIN = __name__ == "__main__"
 
 # # Parse Timetable
 
-# In[ ]:
+# In[2]:
 
 
 def load_original_timetable(filepath):
@@ -39,7 +39,7 @@ def make_records(df, idx_col):
     return {k:v for k,v in zip(idxs, record_list)}
 
 
-# In[ ]:
+# In[3]:
 
 
 df_ref_job = load_original_timetable("./reference/TT Data.csv")
@@ -51,7 +51,7 @@ ref_time = make_records(pd.read_csv("./reference/reference - time.csv"), "time_i
 df_ref_job
 
 
-# In[ ]:
+# In[4]:
 
 
 # extrack track subjects
@@ -69,7 +69,7 @@ track_subjects
 # # Extract subset
 # We will only plot a subset of the timetable
 
-# In[ ]:
+# In[5]:
 
 
 df_sample = df_ref_job[(df_ref_job["term"] == "ESD T5")&(df_ref_job["term_half"] == 1)]
@@ -79,7 +79,7 @@ df_sample
 
 # # Plot timetable
 
-# In[ ]:
+# In[6]:
 
 
 def organize_timetable(df, post_process_times=True):
@@ -117,16 +117,7 @@ if MAIN:
     # organized_timetable[0]
 
 
-# In[ ]:
-
-
-fig = plt.figure(figsize=(14,10), facecolor=(1, 1, 1))
-ax = plt.gca()
-ax.add_patch(patches.Rectangle((0, 0), 1, 1, color=(0,0,0), alpha=0.1)) 
-plt.show()
-
-
-# In[ ]:
+# In[7]:
 
 
 def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, title="", highlighted_track=""):
@@ -191,7 +182,7 @@ if MAIN:
 
 # # Term 7 timetable
 
-# In[ ]:
+# In[8]:
 
 
 if MAIN:
@@ -202,7 +193,7 @@ if MAIN:
 
 # # Plot all relevant timetables
 
-# In[ ]:
+# In[9]:
 
 
 def analyse_related_features(df_output, folder_output="./"):
@@ -273,9 +264,19 @@ def analyse_related_features(df_output, folder_output="./"):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
+# In[ ]:
+
+
+if MAIN:
+    df_output = df_ref_job[df_ref_job["term_half"] == 1]
+    organized_timetable = organize_timetable(df_output)
+    plot_organised_timetable(organized_timetable, show_fig=True)  # show master
+    analyse_related_features(df_output, folder_output="given-timetable")
+
+
 # # Parsing a sample result
 
-# In[ ]:
+# In[13]:
 
 
 results = '''
@@ -319,7 +320,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[ ]:
+# In[14]:
 
 
 def parse_results(results):
@@ -342,14 +343,14 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[ ]:
+# In[15]:
 
 
 if MAIN:
     df_output = parse_results(results)
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
-    analyse_related_features(df_output, folder_output="given-timetable")
+    analyse_related_features(df_output, folder_output="parse-sample-output")
 
 
 # (for versioning purposes)
