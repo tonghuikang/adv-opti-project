@@ -196,7 +196,7 @@ if MAIN:
 # In[9]:
 
 
-def analyse_related_features(df_output, folder_output="./"):
+def analyse_related_features(df_output, folder_output="./", hardcode=False):
     if not os.path.exists(folder_output):  # create folder if does not exist
         os.makedirs(folder_output)
 
@@ -213,6 +213,8 @@ def analyse_related_features(df_output, folder_output="./"):
 
     # term 5 cohort 1 timetable
     df_cohort = df_subset[(df_subset["class_num"] == "CS01") | (df_subset["class_num"] == "LS01")]
+    if hardcode:
+        pass
     organized_timetable = organize_timetable(df_cohort)
     plot_organised_timetable(organized_timetable, 
                              title="Term 5 ESD modules - cohort 1",
@@ -220,6 +222,8 @@ def analyse_related_features(df_output, folder_output="./"):
 
     # term 5 cohort 2 timetable
     df_cohort = df_subset[(df_subset["class_num"] == "CS02") | (df_subset["class_num"] == "LS01")]
+    if hardcode:
+        pass
     organized_timetable = organize_timetable(df_cohort)
     plot_organised_timetable(organized_timetable, 
                              title="Term 5 ESD modules - cohort 2",
@@ -264,7 +268,7 @@ def analyse_related_features(df_output, folder_output="./"):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[ ]:
+# In[10]:
 
 
 if MAIN:
@@ -276,7 +280,7 @@ if MAIN:
 
 # # Parsing a sample result
 
-# In[13]:
+# In[11]:
 
 
 results = '''
@@ -320,7 +324,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[14]:
+# In[12]:
 
 
 def parse_results(results):
@@ -343,7 +347,7 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[15]:
+# In[13]:
 
 
 if MAIN:
@@ -355,7 +359,7 @@ if MAIN:
 
 # (for versioning purposes)
 
-# In[ ]:
+# In[14]:
 
 
 if MAIN:
