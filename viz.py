@@ -122,7 +122,7 @@ if MAIN:
 
 def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, title="", highlighted_track=""):
 
-    fig = plt.figure(figsize=(14,10), facecolor=(1, 1, 1))
+    fig = plt.figure(figsize=(14,8), facecolor=(1, 1, 1))
     ax = plt.gca()
 
     def add_rectangle(ax, locx, locy, height, width, color="white"):
@@ -170,6 +170,7 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
     plt.ylim(0.5,yptr-0.5)
     plt.title(title)
     ax.invert_yaxis()
+    plt.tight_layout()
     if save_path:
         plt.savefig(save_path)
     if show_fig:
@@ -202,6 +203,7 @@ def analyse_related_features(df_output, folder_output="./", hardcode=False):
 
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable,
+                             title="Complete Timetable",
                              save_path="{}/all.png".format(folder_output))
 
     # term 5 timetable
@@ -268,7 +270,7 @@ def analyse_related_features(df_output, folder_output="./", hardcode=False):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[10]:
+# In[ ]:
 
 
 if MAIN:
@@ -280,7 +282,7 @@ if MAIN:
 
 # # Parsing a sample result
 
-# In[11]:
+# In[ ]:
 
 
 results = '''
@@ -324,7 +326,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[12]:
+# In[ ]:
 
 
 def parse_results(results):

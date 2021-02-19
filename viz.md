@@ -1,7 +1,7 @@
 Table of contents
 [TOC]
 
-## Full timetable
+## Complete timetable
 
 ![pic](./given-timetable/all.png)
 ![pic](./produced-timetable/all.png)
