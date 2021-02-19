@@ -3,6 +3,8 @@ Table of contents
 * auto-gen TOC:
 {:toc}
 
+<div style="page-break-after: always;"></div>
+
 ## Complete timetable
 
 ![pic](./given-timetable/all.png)
@@ -158,8 +160,8 @@ Table of contents
 ![pic](./produced-timetable/venue-1.416.png)
 
 <div style="page-break-after: always;"></div>
-![pic](./given-timetable/venue-1.61.png)
-![pic](./produced-timetable/venue-1.61.png)
+![pic](./given-timetable/venue-1.610.png)
+![pic](./produced-timetable/venue-1.610.png)
 
 <div style="page-break-after: always;"></div>
 ![pic](./given-timetable/venue-2.304.png)

@@ -266,7 +266,7 @@ def analyse_related_features(df_output, folder_output="./", title_prefix=""):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[ ]:
+# In[10]:
 
 
 if MAIN:
@@ -279,7 +279,7 @@ if MAIN:
 
 # # Parsing a sample result
 
-# In[ ]:
+# In[11]:
 
 
 results = '''
@@ -323,7 +323,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[ ]:
+# In[12]:
 
 
 def parse_results(results):
@@ -346,7 +346,7 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[ ]:
+# In[13]:
 
 
 if MAIN:
