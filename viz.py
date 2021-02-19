@@ -347,19 +347,19 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[13]:
+# In[ ]:
 
 
 if MAIN:
     df_output = parse_results(results)
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
-    analyse_related_features(df_output, folder_output="parse-sample-output")
+    analyse_related_features(df_output, folder_output="sample-parsed-timetable")
 
 
 # (for versioning purposes)
 
-# In[14]:
+# In[ ]:
 
 
 if MAIN:
