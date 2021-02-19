@@ -1,5 +1,7 @@
 Table of contents
-[TOC]
+
+* auto-gen TOC:
+{:toc}
 
 ## Complete timetable
 

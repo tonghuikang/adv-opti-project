@@ -197,45 +197,41 @@ if MAIN:
 # In[9]:
 
 
-def analyse_related_features(df_output, folder_output="./", hardcode=False):
+def analyse_related_features(df_output, folder_output="./", title_prefix=""):
     if not os.path.exists(folder_output):  # create folder if does not exist
         os.makedirs(folder_output)
 
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable,
-                             title="Complete Timetable",
+                             title="{}Complete Timetable".format(title_prefix),
                              save_path="{}/all.png".format(folder_output))
 
     # term 5 timetable
     df_subset = df_output[df_output["term"] == "ESD T5"]
     organized_timetable = organize_timetable(df_subset)
     plot_organised_timetable(organized_timetable, 
-                             title="Term 5 ESD modules",
+                             title="{}Term 5 ESD modules".format(title_prefix),
                              save_path="{}/comb-ESD-T5.png".format(folder_output))
 
     # term 5 cohort 1 timetable
     df_cohort = df_subset[(df_subset["class_num"] == "CS01") | (df_subset["class_num"] == "LS01")]
-    if hardcode:
-        pass
     organized_timetable = organize_timetable(df_cohort)
     plot_organised_timetable(organized_timetable, 
-                             title="Term 5 ESD modules - cohort 1",
+                             title="{}Term 5 ESD modules - cohort 1".format(title_prefix),
                              save_path="{}/comb-ESD-T5-cohort-1.png".format(folder_output))
 
     # term 5 cohort 2 timetable
     df_cohort = df_subset[(df_subset["class_num"] == "CS02") | (df_subset["class_num"] == "LS01")]
-    if hardcode:
-        pass
     organized_timetable = organize_timetable(df_cohort)
     plot_organised_timetable(organized_timetable, 
-                             title="Term 5 ESD modules - cohort 2",
+                             title="{}Term 5 ESD modules - cohort 2".format(title_prefix),
                              save_path="{}/comb-ESD-T5-cohort-2.png".format(folder_output))
 
     # term 7 timetable
     df_subset = df_output[df_output["term"] != "ESD T5"]
     organized_timetable = organize_timetable(df_subset)
     plot_organised_timetable(organized_timetable, 
-                             title="Term 7 ESD modules",
+                             title="{}Term 7 ESD modules".format(title_prefix),
                              save_path="{}/comb-ESD-T7.png".format(folder_output))
     
     # plotting for each track
@@ -243,7 +239,7 @@ def analyse_related_features(df_output, folder_output="./", hardcode=False):
         if track == "" or track == "track_core":
             continue
         plot_organised_timetable(organized_timetable, highlighted_track=track,
-                                 title="Term 7 ESD modules - Track: {}".format(track), 
+                                 title="{}Term 7 ESD modules - Track: {}".format(title_prefix, track), 
                                  save_path="{}/comb-ESD-T7-track-{}.png".format(folder_output, track))
     
     # plotting for each instructor, venue, subject concerned
@@ -251,7 +247,7 @@ def analyse_related_features(df_output, folder_output="./", hardcode=False):
         df_subset = df_output[df_output["instructor"] == instructor]  
         organized_timetable = organize_timetable(df_subset)
         plot_organised_timetable(organized_timetable, 
-                                 title="For instructor {}".format(instructor),
+                                 title="{}For instructor {}".format(title_prefix, instructor),
                                  save_path="{}/instructor-{}.png".format(folder_output, instructor))
     
     for venue in set(df_output["venue"]):
@@ -259,30 +255,31 @@ def analyse_related_features(df_output, folder_output="./", hardcode=False):
             df_subset = df_output[df_output["venue"].str.contains(sub_venue)]
             organized_timetable = organize_timetable(df_subset)
             plot_organised_timetable(organized_timetable, 
-                                     title="For venue {}".format(venue),
+                                     title="{}For venue {}".format(title_prefix, venue),
                                      save_path="{}/venue-{}.png".format(folder_output, sub_venue))
     
     for subject in set(df_output["subject"]):
         df_subset = df_output[df_output["subject"] == subject]
         organized_timetable = organize_timetable(df_subset)
         plot_organised_timetable(organized_timetable, 
-                                 title="For subject {}".format(subject),
+                                 title="{}For subject {}".format(title_prefix, subject),
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[ ]:
+# In[10]:
 
 
 if MAIN:
     df_output = df_ref_job[df_ref_job["term_half"] == 1]
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
-    analyse_related_features(df_output, folder_output="given-timetable")
+    analyse_related_features(df_output, folder_output="given-timetable",
+                             title_prefix="Given Timetable - ")
 
 
 # # Parsing a sample result
 
-# In[ ]:
+# In[11]:
 
 
 results = '''
@@ -326,7 +323,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[ ]:
+# In[12]:
 
 
 def parse_results(results):
@@ -349,19 +346,20 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[ ]:
+# In[13]:
 
 
 if MAIN:
     df_output = parse_results(results)
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
-    analyse_related_features(df_output, folder_output="sample-parsed-timetable")
+    analyse_related_features(df_output, folder_output="sample-parsed-timetable", 
+                             title_prefix="Sample Parsed Timetable - ")
 
 
 # (for versioning purposes)
 
-# In[ ]:
+# In[14]:
 
 
 if MAIN:
