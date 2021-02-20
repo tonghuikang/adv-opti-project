@@ -52,7 +52,7 @@ Timetable given for optimisation
 ![pic](./first-half/given-timetable/comb-ESD-T5-cohort-1.png)
 
 Timetable produced after optimisation
-![pic](./first-half/first-half/produced-timetable/comb-ESD-T5-cohort-1.png)
+![pic](./first-half/produced-timetable/comb-ESD-T5-cohort-1.png)
 
 <div style="page-break-after: always;"></div>
 Timetable given for optimisation
