@@ -1,3 +1,14 @@
+This appendix contains the timetable visualisation.
+
+- In each page (this webpage is print-friendly), there are two timetables. The timetable on top is the timetable given to us for optimisation, and the timetable below is produced after optimisation.
+- We produced a different set of timetables for the first half and the second half of 2020 Spring Term.
+- For each half, we present different views of the timetable.
+  - ESD Term 5 and ESD Term 7 courses
+  - Courses taken by each ESD Term 5 modules
+  - ESD Term 7 courses, with core modules highlighted for each track
+  - Each course involved in the optimisation
+  - Each instructor involved in the optimisation
+
 Table of contents
 
 * auto-gen TOC:
@@ -9,7 +20,12 @@ Table of contents
 
 ## Complete timetable
 
+Timetable given for optimisation
+
 ![pic](./first-half/given-timetable/all.png)
+
+Timetable produced after optimisation
+
 ![pic](./first-half/produced-timetable/all.png)
 
 <div style="page-break-after: always;"></div>
