@@ -462,5 +462,3 @@ Timetable given for optimisation
 Timetable produced after optimisation
 ![pic](./second-half/produced-timetable/subject-40.323.png)
 
-<div style="page-break-after: always;"></div>
-
