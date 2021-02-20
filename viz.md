@@ -22,10 +22,8 @@ Table of contents
 
 Timetable given for optimisation
 ![pic](./first-half/given-timetable/all.png)
-
 Timetable produced after optimisation
 ![pic](./first-half/produced-timetable/all.png)
-
 <div style="page-break-after: always;"></div>
 
 ## Complete Term 5 timetable
@@ -57,7 +55,6 @@ Timetable produced after optimisation
 ![pic](./first-half/first-half/produced-timetable/comb-ESD-T5-cohort-1.png)
 
 <div style="page-break-after: always;"></div>
-
 Timetable given for optimisation
 ![pic](./first-half/given-timetable/comb-ESD-T5-cohort-2.png)
 
@@ -67,7 +64,6 @@ Timetable produced after optimisation
 <div style="page-break-after: always;"></div>
 
 ## Term 7 timetable by track
-
 
 Timetable given for optimisation
 ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_avi.png)
@@ -169,7 +165,6 @@ Timetable given for optimisation
 Timetable produced after optimisation
 ![pic](./first-half/produced-timetable/instructor-WX.png)
 
-
 <div style="page-break-after: always;"></div>
 
 ## Timetable by subject
@@ -251,10 +246,8 @@ Timetable produced after optimisation
 
 Timetable given for optimisation
 ![pic](./second-half/given-timetable/all.png)
-
 Timetable produced after optimisation
 ![pic](./second-half/produced-timetable/all.png)
-
 <div style="page-break-after: always;"></div>
 
 ## Complete Term 5 timetable
@@ -295,7 +288,6 @@ Timetable produced after optimisation
 <div style="page-break-after: always;"></div>
 
 ## Term 7 timetable by track
-
 
 Timetable given for optimisation
 ![pic](./second-half/given-timetable/comb-ESD-T7-track-track_avi.png)
@@ -396,7 +388,6 @@ Timetable given for optimisation
 
 Timetable produced after optimisation
 ![pic](./second-half/produced-timetable/instructor-KRAM.png)
-
 
 <div style="page-break-after: always;"></div>
 
