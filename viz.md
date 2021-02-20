@@ -18,12 +18,12 @@ Table of contents
 
 # First half
 
-## Complete timetable
-
 Timetable given for optimisation
 ![pic](./first-half/given-timetable/all.png)
+
 Timetable produced after optimisation
 ![pic](./first-half/produced-timetable/all.png)
+
 <div style="page-break-after: always;"></div>
 
 ## Complete Term 5 timetable
@@ -242,12 +242,12 @@ Timetable produced after optimisation
 
 # Second half
 
-## Complete timetable
-
 Timetable given for optimisation
 ![pic](./second-half/given-timetable/all.png)
+
 Timetable produced after optimisation
 ![pic](./second-half/produced-timetable/all.png)
+
 <div style="page-break-after: always;"></div>
 
 ## Complete Term 5 timetable
