@@ -274,10 +274,10 @@ if MAIN:
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
     analyse_related_features(df_output, folder_output="./first-half/given-timetable",
-                             title_prefix="Given Timetable - ")
+                             title_prefix="Given Timetable - First Half - ")
 
 
-# In[ ]:
+# In[11]:
 
 
 if MAIN:
@@ -285,12 +285,12 @@ if MAIN:
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
     analyse_related_features(df_output, folder_output="./second-half/given-timetable",
-                             title_prefix="Given Timetable - ")
+                             title_prefix="Given Timetable - Second Half - ")
 
 
 # # Parsing a sample result
 
-# In[ ]:
+# In[12]:
 
 
 results = '''
@@ -334,7 +334,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[ ]:
+# In[13]:
 
 
 def parse_results(results):
@@ -357,7 +357,7 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[ ]:
+# In[14]:
 
 
 if MAIN:
@@ -370,7 +370,7 @@ if MAIN:
 
 # (for versioning purposes)
 
-# In[ ]:
+# In[15]:
 
 
 if MAIN:
