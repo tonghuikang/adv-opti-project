@@ -100,13 +100,23 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
+#### Term 5 Cohort 1
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
 | Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T5-cohort-1.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T5-cohort-1.png) |
 | Combined objectives              ![pic](./task-3/combined/comb-ESD-T5-cohort-1.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T5-cohort-1.png) |
 |                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T5-cohort-1.png) |
 
 <div style="page-break-after: always;"></div>
 
-
+#### Term 5 Cohort 2
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -126,7 +136,17 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-## Term 7 timetable by track#### Aviation Track
+## Term 7 timetable by track
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
+#### Aviation Track
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -186,7 +206,17 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-## Timetable by instructor#### Konstantinos Courcoubetis
+## Timetable by instructor
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
+#### Konstantinos Courcoubetis
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -286,7 +316,17 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-## Timetable by subject#### 01.104 Networked Life
+## Timetable by subject
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
+#### 01.104 Networked Life
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
