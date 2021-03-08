@@ -46,6 +46,16 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
+
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
 ## Complete Term 5 timetable
 
 | <!-- -->    | <!-- -->    |
@@ -56,6 +66,16 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
+
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
 ## Complete Term 7 timetable
 
 | <!-- -->    | <!-- -->    |
@@ -63,6 +83,16 @@ Table of contents
 | Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7.png) |
 | Combined objectives              ![pic](./task-3/combined/comb-ESD-T7.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7.png) |
 |                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7.png) |
+
+<div style="page-break-after: always;"></div>
+
+
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
 
 <div style="page-break-after: always;"></div>
 
@@ -86,7 +116,17 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-## Term 7 timetable by track
+
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
+## Term 7 timetable by track#### Aviation Track
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -96,7 +136,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Business Analytics / Operations Research Track
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -106,7 +146,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Finance Track
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -116,7 +156,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Supply Chain and Logistics Track
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -126,7 +166,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Urban Infrastructure Track
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -136,7 +176,17 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-## Timetable by instructor
+
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
+## Timetable by instructor#### Konstantinos Courcoubetis
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -146,7 +196,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Lynette Cheah
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -156,7 +206,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Bikramjit Das
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -166,7 +216,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Douglas Streeter Rolph
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -176,7 +226,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Lin Shaowei
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -186,7 +236,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Nuno Antunes Ribeiro
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -196,7 +246,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Peter Lawrence Jackson
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -206,7 +256,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Shrutivandana Sharma
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -216,7 +266,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### Wang Xingyin
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -226,7 +276,17 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-## Timetable by subject
+
+
+| <!-- -->    | <!-- -->    |
+| ----------------------------------- | ------------ |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/.png) | Variant 1 ![pic](./task-3/variant-1/.png) |
+| Combined objectives              ![pic](./task-3/combined/.png)            | Variant 2 ![pic](./task-3/variant-2/.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/.png) |
+
+<div style="page-break-after: always;"></div>
+
+## Timetable by subject#### 01.104 Networked Life
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -236,7 +296,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 01.107 Urban Transportation
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -246,7 +306,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.004 Statistics
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -256,7 +316,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.012 Manufacturing and Service Operations
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -266,7 +326,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.014 Engineering Systems Architecture
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -276,7 +336,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.242 Derivative Pricing and Risk Management
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -286,7 +346,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.302 Advanced Topics in Optimisation
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -296,7 +356,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.319 Statistical and Machine Learning
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -306,7 +366,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.321 Airport Systems Modelling and Simulation
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
@@ -316,7 +376,7 @@ Table of contents
 
 <div style="page-break-after: always;"></div>
 
-
+#### 40.323 Equity Valuation
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
