@@ -1,7 +1,7 @@
 
 This appendix contains the timetable visualisation for Team Kutosotase
 
-In each page (this webpage is print-friendly), there are five timetables.
+In each page (this webpage is print-friendly), there are five timetables arranged in a table.
   - The original timetable
   - The timetable with variant 1
   - The timetable with variant 2
@@ -16,6 +16,7 @@ We present different views of the timetable for the first half.
   - Each instructor involved in the optimisation
 
 The color represents a track or a term 5 cohort
+
 | Color | Group | Comments |
 | ----- | ----- | -------- |
 | yellow | T5 Cohort 1  |  |
@@ -34,6 +35,7 @@ Table of contents
 {:toc}
 
 <div style="page-break-after: always;"></div>
+
 ## Combined Timetable
 
 | <!-- -->    | <!-- -->    |
