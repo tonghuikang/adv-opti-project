@@ -173,9 +173,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-\(TAE\) KC.png) | Variant 1 ![pic](./task-3/variant-1/instructor-\(TAE\) KC.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-\(TAE\) KC.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-\(TAE\) KC.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-\(TAE\) KC.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-%28TAE%29 KC.png) | Variant 1 ![pic](./task-3/variant-1/instructor-%28TAE%29 KC.png) |
+| Combined objectives              ![pic](./task-3/combined/instructor-%28TAE%29 KC.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-%28TAE%29 KC.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-%28TAE%29 KC.png) |
 
 <div style="page-break-after: always;"></div>
 
@@ -185,9 +185,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-\(TAE\) LC.png) | Variant 1 ![pic](./task-3/variant-1/instructor-\(TAE\) LC.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-\(TAE\) LC.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-\(TAE\) LC.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-\(TAE\) LC.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-%28TAE%29 LC.png) | Variant 1 ![pic](./task-3/variant-1/instructor-%28TAE%29 LC.png) |
+| Combined objectives              ![pic](./task-3/combined/instructor-%28TAE%29 LC.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-%28TAE%29 LC.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-%28TAE%29 LC.png) |
 
 <div style="page-break-after: always;"></div>
 
