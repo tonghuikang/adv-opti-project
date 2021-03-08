@@ -80,6 +80,19 @@ track_subjects
 track_color
 
 
+# In[ ]:
+
+
+# define blocked out timings
+blocked_timings = [
+    [("HASS", 15, 18)],
+    [("HASS", 8.5, 10)],
+    [("Capstone / End of Day", 13.5, 20)],
+    [("HASS", 15, 18)],
+    [("HASS", 11.5, 13.5), ("Capstone / End of Day", 13.5, 20)],
+]
+
+
 # # Extract subset
 # We will only plot a subset of the timetable
 
@@ -155,7 +168,7 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False,
     yptr = 1
     days_label_yptr = []
     add_horizontal_line(ax, 0.5)
-    for day_schedule in organized_timetable:
+    for idx,day_schedule in enumerate(organized_timetable):
         day_start_yptr = yptr
         for parallel_day_schedule in day_schedule:
             for record in parallel_day_schedule:
@@ -178,6 +191,11 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False,
         day_end_yptr = yptr
         days_label_yptr.append((day_end_yptr + day_start_yptr)/2)
         add_horizontal_line(ax, yptr+0.5)
+        
+        for reason, start, end in blocked_timings[idx]:
+            add_rectangle(ax, start, day_start_yptr, end-start, day_end_yptr-day_start_yptr, color="grey")
+            add_text(ax, start, day_start_yptr, reason)
+        
         yptr += 1
 
     day_code_to_day_index = {time["day"]:time["day_ix"]-1 for time in ref_time.values()}
@@ -314,8 +332,8 @@ if MAIN:
     df_output = df_ref_job[df_ref_job["term_half"] == 2]
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
-    analyse_related_features(df_output, folder_output="./first-half/given-timetable",
-                             title_prefix="Given Timetable - First Half - ")
+    analyse_related_features(df_output, folder_output="./second-half/given-timetable",
+                             title_prefix="Given Timetable - Second Half - ")
 
 
 # # Parsing a sample result
@@ -399,6 +417,12 @@ if MAIN:
 
 if MAIN:
     get_ipython().system('jupyter nbconvert --to script viz.ipynb')
+
+
+# In[ ]:
+
+
+organized_timetable
 
 
 # In[ ]:
