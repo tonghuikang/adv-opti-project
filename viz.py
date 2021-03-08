@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import os, collections
@@ -17,7 +17,7 @@ MAIN = __name__ == "__main__"
 
 # # Parse Timetable
 
-# In[2]:
+# In[ ]:
 
 
 def load_original_timetable(filepath):
@@ -39,7 +39,7 @@ def make_records(df, idx_col):
     return {k:v for k,v in zip(idxs, record_list)}
 
 
-# In[3]:
+# In[ ]:
 
 
 df_ref_job = load_original_timetable("./reference/TT Data.csv")
@@ -51,7 +51,7 @@ ref_time = make_records(pd.read_csv("./reference/reference - time.csv"), "time_i
 df_ref_job
 
 
-# In[4]:
+# In[ ]:
 
 
 # extrack track subjects
@@ -63,13 +63,27 @@ for subject_info in ref_subject.values():
         if subject_info[track]:
             track_subjects[track].add(subject_info[subject])
 
+track_color = {}
+for subject in track_subjects['track_fin']:
+    track_color[subject] = 'limegreen'
+for subject in track_subjects['track_ba']:
+    track_color[subject] = 'lightcoral'
+for subject in track_subjects['track_avi']:
+    track_color[subject] = 'deepskyblue'
+
 track_subjects
+
+
+# In[ ]:
+
+
+track_color
 
 
 # # Extract subset
 # We will only plot a subset of the timetable
 
-# In[5]:
+# In[ ]:
 
 
 df_sample = df_ref_job[(df_ref_job["term"] == "ESD T5")&(df_ref_job["term_half"] == 1)]
@@ -79,7 +93,7 @@ df_sample
 
 # # Plot timetable
 
-# In[6]:
+# In[ ]:
 
 
 def organize_timetable(df, post_process_times=True):
@@ -117,10 +131,11 @@ if MAIN:
     # organized_timetable[0]
 
 
-# In[7]:
+# In[ ]:
 
 
-def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, title="", highlighted_track=""):
+def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
+                             title="", highlighted_track="", highlight_all_tracks=True):
 
     fig = plt.figure(figsize=(14,8), facecolor=(1, 1, 1))
     ax = plt.gca()
@@ -129,7 +144,7 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
         ax.add_patch(patches.Rectangle((locx, locy), height, width, edgecolor="black",
                                        facecolor=color, alpha=0.5))
 
-    def add_text(ax, locx, locy, text, offset=0.1):
+    def add_text(ax, locx, locy, text, offset=0.08):
         locx += offset
         locy += offset
         ax.text(locx, locy, text, verticalalignment='top', size='smaller')
@@ -147,8 +162,14 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
                 xptr = record["hour_index"]
                 width = record["proc_time"]
                 color = "white"
-                if record["subject"] in track_subjects[highlighted_track]:
-                    color = "yellow"
+                if record["subject"] in track_subjects[highlighted_track] or highlight_all_tracks:
+                    if record["subject"] in track_color:
+                        color = track_color[record["subject"]]
+                    else:
+                        if record["class_num"] == "CS01":
+                            color = "yellow"
+                        else:
+                            color = "orange"
                 add_rectangle(ax, xptr, yptr, width, 1, color=color)
                 add_text(ax, xptr, yptr, record["subject"] + " " + record["class_num"])
                 add_text(ax, xptr, yptr+0.3, record["venue"])
@@ -177,24 +198,32 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
         plt.show()
     plt.close()
 
+
+# # Term 5 timetable
+
+# In[ ]:
+
+
 if MAIN:
-    plot_organised_timetable(organized_timetable, show_fig=True, highlighted_track="track_core")
+    df_sample = df_ref_job[(df_ref_job["term"] == "ESD T5")&(df_ref_job["term_half"] == 1)]
+    organized_timetable = organize_timetable(df_sample)
+    plot_organised_timetable(organized_timetable, show_fig=True)
 
 
 # # Term 7 timetable
 
-# In[8]:
+# In[ ]:
 
 
 if MAIN:
-    df_sample = df_ref_job[(df_ref_job["term"] == "ESD T7")&(df_ref_job["term_half"] == 1)]
+    df_sample = df_ref_job[(df_ref_job["term"] != "ESD T5")&(df_ref_job["term_half"] == 1)]
     organized_timetable = organize_timetable(df_sample)
     plot_organised_timetable(organized_timetable, show_fig=True)
 
 
 # # Plot all relevant timetables
 
-# In[9]:
+# In[ ]:
 
 
 def analyse_related_features(df_output, folder_output="./", title_prefix=""):
@@ -240,7 +269,8 @@ def analyse_related_features(df_output, folder_output="./", title_prefix=""):
             continue
         plot_organised_timetable(organized_timetable, highlighted_track=track,
                                  title="{}Term 7 ESD modules - Track: {}".format(title_prefix, track), 
-                                 save_path="{}/comb-ESD-T7-track-{}.png".format(folder_output, track))
+                                 save_path="{}/comb-ESD-T7-track-{}.png".format(folder_output, track),
+                                 highlight_all_tracks=False)
     
     # plotting for each instructor, venue, subject concerned
     for instructor in set(df_output["instructor"]):
@@ -266,7 +296,7 @@ def analyse_related_features(df_output, folder_output="./", title_prefix=""):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[10]:
+# In[ ]:
 
 
 if MAIN:
@@ -277,64 +307,58 @@ if MAIN:
                              title_prefix="Given Timetable - First Half - ")
 
 
-# In[11]:
+# In[ ]:
 
 
 if MAIN:
     df_output = df_ref_job[df_ref_job["term_half"] == 2]
     organized_timetable = organize_timetable(df_output)
     plot_organised_timetable(organized_timetable, show_fig=True)  # show master
-    analyse_related_features(df_output, folder_output="./second-half/given-timetable",
-                             title_prefix="Given Timetable - Second Half - ")
+    analyse_related_features(df_output, folder_output="./first-half/given-timetable",
+                             title_prefix="Given Timetable - First Half - ")
 
 
 # # Parsing a sample result
 
-# In[12]:
+# In[ ]:
 
 
 results = '''
-X[1,26,17] 1
-X[2,26,29] 1
-X[3,26,1] 1
-X[4,26,47] 1
-X[5,26,10] 1
-X[6,26,52] 1
-X[7,33,5] 1
-X[8,33,26] 1
-X[9,33,60] 1
-X[10,32,6] 1
-X[11,32,25] 1
-X[12,32,19] 1
-X[13,32,32] 1
-X[27,20,12] 1
-X[28,20,28] 1
-X[29,17,21] 1
-X[30,17,29] 1
-X[31,12,57] 1
-X[32,32,1] 1
+X[1,26,29] 1
+X[2,26,49] 1
+X[3,26,34] 1
+X[4,26,67] 1
+X[5,26,1] 1
+X[6,26,44] 1
+X[7,33,9] 1
+X[8,33,50] 1
+X[9,33,79] 1
+X[10,32,9] 1
+X[12,32,1] 1
+X[13,32,29] 1
+X[27,20,1] 1
+X[28,20,44] 1
+X[29,17,29] 1
+X[30,17,59] 1
+X[31,12,86] 1
+X[32,32,5] 1
 X[33,6,49] 1
-X[34,6,14] 1
-X[35,6,75] 1
-X[36,1,34] 1
-X[37,12,5] 1
-X[38,12,29] 1
-X[39,17,1] 1
-X[40,17,33] 1
-X[54,17,11] 1
-X[55,17,25] 1
-X[56,8,88] 1
-X[57,8,1] 1
-X[58,21,1] 1
-X[59,21,25] 1
-X[60,27,1] 1
-X[61,27,88] 1
+X[34,6,1] 1
+X[35,6,83] 1
+X[36,1,35] 1
+X[37,12,1] 1
+X[38,12,36] 1
+X[40,17,37] 1
+X[54,17,41] 1
+X[55,17,67] 1
+X[56,21,67] 1
+X[57,21,84] 1
 '''.strip()
 results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for result in results.split('\n')]
 results # job_ix, venue_ix, time_ix
 
 
-# In[13]:
+# In[ ]:
 
 
 def parse_results(results):
@@ -357,7 +381,7 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[14]:
+# In[ ]:
 
 
 if MAIN:
@@ -370,7 +394,7 @@ if MAIN:
 
 # (for versioning purposes)
 
-# In[15]:
+# In[ ]:
 
 
 if MAIN:
