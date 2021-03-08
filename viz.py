@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 import os, collections
@@ -17,7 +17,7 @@ MAIN = __name__ == "__main__"
 
 # # Parse Timetable
 
-# In[ ]:
+# In[2]:
 
 
 def load_original_timetable(filepath):
@@ -39,7 +39,7 @@ def make_records(df, idx_col):
     return {k:v for k,v in zip(idxs, record_list)}
 
 
-# In[ ]:
+# In[3]:
 
 
 df_ref_job = load_original_timetable("./reference/TT Data.csv")
@@ -51,7 +51,7 @@ ref_time = make_records(pd.read_csv("./reference/reference - time.csv"), "time_i
 df_ref_job
 
 
-# In[ ]:
+# In[4]:
 
 
 # extrack track subjects
@@ -74,13 +74,13 @@ for subject in track_subjects['track_avi']:
 track_subjects
 
 
-# In[ ]:
+# In[5]:
 
 
 track_color
 
 
-# In[ ]:
+# In[6]:
 
 
 # define blocked out timings
@@ -96,7 +96,7 @@ blocked_timings = [
 # # Extract subset
 # We will only plot a subset of the timetable
 
-# In[ ]:
+# In[7]:
 
 
 df_sample = df_ref_job[(df_ref_job["term"] == "ESD T5")&(df_ref_job["term_half"] == 1)]
@@ -106,7 +106,7 @@ df_sample
 
 # # Plot timetable
 
-# In[ ]:
+# In[8]:
 
 
 def organize_timetable(df, post_process_times=True):
@@ -144,7 +144,7 @@ if MAIN:
     # organized_timetable[0]
 
 
-# In[ ]:
+# In[9]:
 
 
 def plot_organised_timetable(organized_timetable, save_path="", show_fig=False, 
@@ -219,7 +219,7 @@ def plot_organised_timetable(organized_timetable, save_path="", show_fig=False,
 
 # # Term 5 timetable
 
-# In[ ]:
+# In[10]:
 
 
 if MAIN:
@@ -230,7 +230,7 @@ if MAIN:
 
 # # Term 7 timetable
 
-# In[ ]:
+# In[11]:
 
 
 if MAIN:
@@ -241,7 +241,7 @@ if MAIN:
 
 # # Plot all relevant timetables
 
-# In[ ]:
+# In[12]:
 
 
 def analyse_related_features(df_output, folder_output="./", title_prefix=""):
@@ -314,7 +314,7 @@ def analyse_related_features(df_output, folder_output="./", title_prefix=""):
                                  save_path="{}/subject-{}.png".format(folder_output, subject))
 
 
-# In[ ]:
+# In[13]:
 
 
 if MAIN:
@@ -325,7 +325,7 @@ if MAIN:
                              title_prefix="Given Timetable - First Half - ")
 
 
-# In[ ]:
+# In[14]:
 
 
 if MAIN:
@@ -338,7 +338,7 @@ if MAIN:
 
 # # Parsing a sample result
 
-# In[ ]:
+# In[15]:
 
 
 results = '''
@@ -376,7 +376,7 @@ results = [list(map(int,result.split("]")[0].split("[")[1].split(','))) for resu
 results # job_ix, venue_ix, time_ix
 
 
-# In[ ]:
+# In[16]:
 
 
 def parse_results(results):
@@ -399,7 +399,7 @@ def parse_results(results):
     return pd.DataFrame.from_records(records)
 
 
-# In[ ]:
+# In[17]:
 
 
 if MAIN:
@@ -412,17 +412,11 @@ if MAIN:
 
 # (for versioning purposes)
 
-# In[ ]:
+# In[18]:
 
 
 if MAIN:
     get_ipython().system('jupyter nbconvert --to script viz.ipynb')
-
-
-# In[ ]:
-
-
-organized_timetable
 
 
 # In[ ]:
