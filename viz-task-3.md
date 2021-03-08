@@ -257,9 +257,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-SS.png.png) | Variant 1 ![pic](./task-3/variant-1/instructor-SS.png.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-SS.png.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-SS.png.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-SS.png.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-SS.png) | Variant 1 ![pic](./task-3/variant-1/instructor-SS.png) |
+| Combined objectives              ![pic](./task-3/combined/instructor-SS.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-SS.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-SS.png) |
 
 <div style="page-break-after: always;"></div>
 
@@ -269,9 +269,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-WX.png.png) | Variant 1 ![pic](./task-3/variant-1/instructor-WX.png.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-WX.png.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-WX.png.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-WX.png.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-WX.png) | Variant 1 ![pic](./task-3/variant-1/instructor-WX.png) |
+| Combined objectives              ![pic](./task-3/combined/instructor-WX.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-WX.png) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-WX.png) |
 
 <div style="page-break-after: always;"></div>
 
