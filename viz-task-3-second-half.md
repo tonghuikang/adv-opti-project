@@ -1,5 +1,8 @@
 
-This appendix contains the timetable visualisation for Team Kutosotase **for the second half**
+This appendix contains the timetable visualisation for Team Kutosotase.
+
+This presents the **second half** of Term 5/7.
+Please refer to this [page](./viz-task-3.md) for the first half Term 5/7.
 
 In each page (this webpage is print-friendly), there are five timetables arranged in a table.
   - The original timetable
@@ -8,7 +11,7 @@ In each page (this webpage is print-friendly), there are five timetables arrange
   - The timetable with variant 3
   - The timetable combining the variants
 
-We present different views of the timetable for the first half.
+We present different views of the timetable for the second half of term 5/7.
   - ESD Term 5 and ESD Term 7 courses
   - Courses taken by each ESD Term 5 modules
   - ESD Term 7 courses, with core modules highlighted for each track
