@@ -6,9 +6,9 @@ Please refer to this [page](./viz-task-3-second-half.md) for the second half Ter
 
 In each page (this webpage is print-friendly), there are five timetables arranged in a table.
   - The original timetable
-  - The timetable with variant 1
-  - The timetable with variant 2
-  - The timetable with variant 3
+  - The timetable with variant 1 - back-to-back classes
+  - The timetable with variant 2 - number of days in school for a focus track cohort
+  - The timetable with variant 3 - number of undesirable class times
   - The timetable combining the variants
 
 We present different views of the timetable for the first half of term 5/7.
