@@ -45,9 +45,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/all.png) | Variant 1 ![pic](./task-3/variant-1/all.png) |
-| Combined objectives              ![pic](./task-3/combined/all.png)            | Variant 2 ![pic](./task-3/variant-2/all.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/all.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/all.svg) | Variant 1 ![pic](./task-3/variant-1/all.svg) |
+| Combined objectives              ![pic](./task-3/combined/all.svg)            | Variant 2 ![pic](./task-3/variant-2/all.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/all.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -58,9 +58,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T5.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T5.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T5.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T5.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T5.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T5.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T5.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T5.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T5.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T5.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -71,9 +71,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -86,9 +86,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T5-cohort-1.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T5-cohort-1.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T5-cohort-1.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T5-cohort-1.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T5-cohort-1.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T5-cohort-1.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T5-cohort-1.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T5-cohort-1.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T5-cohort-1.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T5-cohort-1.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -98,9 +98,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T5-cohort-2.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T5-cohort-2.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T5-cohort-2.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T5-cohort-2.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T5-cohort-2.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T5-cohort-2.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T5-cohort-2.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T5-cohort-2.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T5-cohort-2.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T5-cohort-2.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -113,9 +113,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_avi.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_avi.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_avi.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_avi.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_avi.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_avi.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_avi.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_avi.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_avi.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_avi.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -125,9 +125,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_ba.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_ba.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_ba.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_ba.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_ba.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_ba.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_ba.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_ba.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_ba.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_ba.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -137,9 +137,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_fin.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_fin.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_fin.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_fin.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_fin.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_fin.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_fin.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_fin.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_fin.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_fin.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -149,9 +149,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_scl.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_scl.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_scl.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_scl.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_scl.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_scl.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_scl.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_scl.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_scl.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_scl.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -161,9 +161,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_uis.png) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_uis.png) |
-| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_uis.png)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_uis.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_uis.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/comb-ESD-T7-track-track_uis.svg) | Variant 1 ![pic](./task-3/variant-1/comb-ESD-T7-track-track_uis.svg) |
+| Combined objectives              ![pic](./task-3/combined/comb-ESD-T7-track-track_uis.svg)            | Variant 2 ![pic](./task-3/variant-2/comb-ESD-T7-track-track_uis.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/comb-ESD-T7-track-track_uis.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -176,9 +176,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-%28TAE%29 KC.png) | Variant 1 ![pic](./task-3/variant-1/instructor-%28TAE%29 KC.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-%28TAE%29 KC.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-%28TAE%29 KC.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-%28TAE%29 KC.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-%28TAE%29 KC.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-%28TAE%29 KC.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-%28TAE%29 KC.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-%28TAE%29 KC.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-%28TAE%29 KC.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -188,9 +188,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-%28TAE%29 LC.png) | Variant 1 ![pic](./task-3/variant-1/instructor-%28TAE%29 LC.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-%28TAE%29 LC.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-%28TAE%29 LC.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-%28TAE%29 LC.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-%28TAE%29 LC.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-%28TAE%29 LC.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-%28TAE%29 LC.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-%28TAE%29 LC.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-%28TAE%29 LC.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -200,9 +200,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-BD.png) | Variant 1 ![pic](./task-3/variant-1/instructor-BD.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-BD.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-BD.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-BD.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-BD.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-BD.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-BD.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-BD.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-BD.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -212,9 +212,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-DSR.png) | Variant 1 ![pic](./task-3/variant-1/instructor-DSR.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-DSR.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-DSR.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-DSR.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-DSR.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-DSR.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-DSR.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-DSR.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-DSR.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -224,9 +224,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-LS.png) | Variant 1 ![pic](./task-3/variant-1/instructor-LS.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-LS.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-LS.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-LS.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-LS.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-LS.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-LS.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-LS.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-LS.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -236,9 +236,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-NAR.png) | Variant 1 ![pic](./task-3/variant-1/instructor-NAR.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-NAR.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-NAR.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-NAR.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-NAR.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-NAR.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-NAR.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-NAR.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-NAR.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -248,9 +248,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-PLJ.png) | Variant 1 ![pic](./task-3/variant-1/instructor-PLJ.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-PLJ.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-PLJ.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-PLJ.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-PLJ.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-PLJ.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-PLJ.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-PLJ.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-PLJ.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -260,9 +260,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-SS.png) | Variant 1 ![pic](./task-3/variant-1/instructor-SS.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-SS.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-SS.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-SS.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-SS.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-SS.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-SS.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-SS.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-SS.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -272,9 +272,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-WX.png) | Variant 1 ![pic](./task-3/variant-1/instructor-WX.png) |
-| Combined objectives              ![pic](./task-3/combined/instructor-WX.png)            | Variant 2 ![pic](./task-3/variant-2/instructor-WX.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-WX.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/instructor-WX.svg) | Variant 1 ![pic](./task-3/variant-1/instructor-WX.svg) |
+| Combined objectives              ![pic](./task-3/combined/instructor-WX.svg)            | Variant 2 ![pic](./task-3/variant-2/instructor-WX.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/instructor-WX.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -287,9 +287,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-01.104.png) | Variant 1 ![pic](./task-3/variant-1/subject-01.104.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-01.104.png)            | Variant 2 ![pic](./task-3/variant-2/subject-01.104.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-01.104.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-01.104.svg) | Variant 1 ![pic](./task-3/variant-1/subject-01.104.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-01.104.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-01.104.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-01.104.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -299,9 +299,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-01.107.png) | Variant 1 ![pic](./task-3/variant-1/subject-01.107.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-01.107.png)            | Variant 2 ![pic](./task-3/variant-2/subject-01.107.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-01.107.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-01.107.svg) | Variant 1 ![pic](./task-3/variant-1/subject-01.107.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-01.107.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-01.107.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-01.107.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -311,9 +311,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.004.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.004.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.004.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.004.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.004.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.004.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.004.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.004.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.004.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.004.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -323,9 +323,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.012.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.012.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.012.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.012.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.012.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.012.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.012.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.012.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.012.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.012.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -335,9 +335,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.014.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.014.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.014.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.014.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.014.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.014.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.014.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.014.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.014.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.014.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -347,9 +347,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.242.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.242.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.242.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.242.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.242.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.242.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.242.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.242.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.242.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.242.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -359,9 +359,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.302.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.302.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.302.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.302.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.302.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.302.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.302.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.302.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.302.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.302.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -371,9 +371,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.319.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.319.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.319.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.319.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.319.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.319.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.319.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.319.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.319.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.319.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -383,9 +383,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.321.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.321.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.321.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.321.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.321.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.321.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.321.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.321.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.321.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.321.svg) |
 
 <div style="page-break-after: always;"></div>
 
@@ -395,9 +395,9 @@ Table of contents
 
 | <!-- -->    | <!-- -->    |
 | ----------------------------------- | ------------ |
-| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.323.png) | Variant 1 ![pic](./task-3/variant-1/subject-40.323.png) |
-| Combined objectives              ![pic](./task-3/combined/subject-40.323.png)            | Variant 2 ![pic](./task-3/variant-2/subject-40.323.png) |
-|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.323.png) |
+| Timetable given for optimisation ![pic](./first-half/given-timetable/subject-40.323.svg) | Variant 1 ![pic](./task-3/variant-1/subject-40.323.svg) |
+| Combined objectives              ![pic](./task-3/combined/subject-40.323.svg)            | Variant 2 ![pic](./task-3/variant-2/subject-40.323.svg) |
+|                                                                              | Variant 3 ![pic](./task-3/variant-3/subject-40.323.svg) |
 
 <div style="page-break-after: always;"></div>
 
